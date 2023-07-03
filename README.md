@@ -26,3 +26,19 @@
 3. Для запуска использовать команды
 
     `python main.py` или запустить из IDE `main.py`
+
+### Для получения токена
+
+1. Создать приложение согласно документации API VK
+`https://vk.com/login?u=2&to=L2VkaXRhcHA/YWN0PWNyZWF0ZQ--`
+После авторизации, создать приложение:
+    * Ввести название
+    * Слева во вкладке Настройки скопировать Id приложения
+    * Вставить в ссылуку в п.2
+
+2. Необходимо получить access_token, для этого в браузере добавить ссылку
+`https://oauth.vk.com/authorize?client_id=<idВАШЕГОПРИЛОЖЕНИЯ>&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=friends,groups,offline&response_type=token&v=5.131`
+
+3. Сохранить парметр access_token=Ваш токен до слова "&expires_in"
+
+4. Токен использовать при запуске скрипта, юудет запрос на ввод токена.
